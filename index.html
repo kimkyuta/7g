@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7초 게임 - 시간 감각 테스트!</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- 폭죽 효과를 위한 라이브러리 -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+    <!-- 게임 화면 -->
+    <div class="game-container">
+        <!-- 게임 제목 -->
+        <h1>7초 게임</h1>
+        
+        <!-- 게임 설명 -->
+        <p class="game-description">
+            버튼을 한 번 누르면 시작하고, 7초가 되었다고 생각할 때 다시 눌러보세요!<br>
+            0.01초 단위로 측정되며, 정확도에 따라 등수가 결정됩니다!
+        </p>
+        
+        <!-- 전자시계 -->
+        <div class="timer-display">00.00</div>
+        
+        <!-- 시작/멈춤 버튼 -->
+        <div class="game-controls">
+            <button id="toggleBtn" class="toggle-btn">시작하기</button>
+        </div>
+
+        <!-- 결과 표시 -->
+        <div class="result-display">
+            <p id="lastResult"></p>
+            <p id="bonusInfo"></p>
+        </div>
+
+        <!-- 랭킹 목록 -->
+        <div class="ranking-board">
+            <h2>🎯 도전 목표</h2>
+            <ol id="rankingList">
+                <li class="rank-item">1등: 정확히 7초를 맞추세요!</li>
+                <li class="rank-item">2등: 0.05초 이내로 맞추세요!</li>
+                <li class="rank-item">3등: 0.1초 이내로 맞추세요!</li>
+                <li class="rank-item">4등: 0.3초 이내로 맞추세요!</li>
+                <li class="rank-item">5등: 1초 이내로 맞추세요!</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- 등수 달성 축하 화면 -->
+    <div id="rankOverlay" class="rank-overlay">
+        <div class="rank-message"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
