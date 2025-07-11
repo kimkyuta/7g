@@ -1,0 +1,123 @@
+/* 전체 배경은 밝은 파스텔톤으로 설정합니다 */
+body {
+  background: #f8fafc;
+  font-family: 'Nanum Gothic', 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+/* 타이틀을 크게, 굵게 표시합니다 */
+#title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-top: 32px;
+  color: #222;
+}
+
+/* 설명란은 조금 더 작은 글씨로 */
+#description {
+  font-size: 1.2rem;
+  margin-bottom: 24px;
+  color: #444;
+}
+
+/* 전자시계는 크고 굵게, 중앙에 배치 */
+#timer-container {
+  margin: 32px 0 16px 0;
+}
+#timer {
+  font-size: 5rem;
+  font-weight: bold;
+  color: #222;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 8px #eee;
+}
+
+/* 시작/멈추기 버튼 스타일 */
+#startStopBtn {
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 18px 60px;
+  border: none;
+  border-radius: 40px;
+  margin: 16px 0 12px 0;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+}
+#startStopBtn.start {
+  background: #ffe066; /* 파스텔 노랑 */
+  color: #222;
+}
+#startStopBtn.stop {
+  background: #ff8787; /* 파스텔 레드 */
+  color: #fff;
+}
+
+/* 등수 설명 박스는 노란색, 둥글게, 그림자 */
+#rank-info {
+  background: #fff9db;
+  border-radius: 18px;
+  display: inline-block;
+  padding: 18px 32px;
+  margin-bottom: 32px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  font-size: 1.1rem;
+  color: #222;
+}
+#rank-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+#rank-info li {
+  margin: 6px 0;
+}
+
+/* 결과 박스: 크고, 컬러 강조, 둥글게, 그림자 */
+#result-box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 320px;
+  min-height: 160px;
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  font-size: 2.2rem;
+  color: #222;
+  border: 6px solid #ffe066;
+  font-weight: bold;
+  padding: 32px 16px;
+  animation: pop 0.3s;
+}
+@keyframes pop {
+  0% { transform: scale(0.7) translate(-50%, -50%); }
+  100% { transform: scale(1) translate(-50%, -50%); }
+}
+
+/* 기록 리스트: 최근 기록을 아래에 보여줍니다 */
+#history {
+  margin: 32px auto 0 auto;
+  max-width: 400px;
+  text-align: left;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* 폭죽/꽃가루 캔버스는 화면 전체를 덮습니다 */
+#confetti-canvas {
+  position: fixed;
+  left: 0; top: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 999;
+} 
